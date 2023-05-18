@@ -2,6 +2,61 @@
 # coding: utf-8
 
 # In[ ]:
+import subprocess
+import sys
+import time
+########################################################################################## Libaries
+
+def install(package):
+    subprocess.call([sys.executable, "-m", "pip", "install", package])
+
+def harf_yazma(a):
+    b=""
+    for i in a:
+        b+=i
+        print(b,end="\r")
+        time.sleep(0.1)
+#harf_yazma("-Code By Majed")
+print("-Code By Majed")
+
+
+
+time.sleep(1)
+print("Welcome to the game / Oyuna hoş geldiniz")
+time.sleep(1)
+print("Checking required libraries / Gerekli kütüphaneler kontrol ediliyor")
+time.sleep(1)
+print("Required libraries are [tkinter,Pillow] / gerekli kütüphaneler [tkinter,Pillow,playsound]")
+time.sleep(1)
+
+try:
+    print("[GAME] Trying to import tkinter ")
+    from tkinter import *
+except:
+    print("[EXCEPTION] tkinter not installed")
+    try:
+        print("[GAME] Trying to install tkinter via pip")
+        import pip
+        install("tk")
+        print("[GAME] tkinter has been installed")
+    except:
+        print("[EXCEPTION] Pip not installed on system")
+
+try:
+    print("[GAME] Trying to import Pillow")
+    import PIL
+except:
+    print("[EXCEPTION] Pillow not installed")
+    try:
+        print("[GAME] Trying to install Pillow via pip")
+        import pip
+        install("Pillow")
+        print("[GAME] Pillow has been installed")
+    except:
+        print("[EXCEPTION] Pip not installed on system")
+
+##########################################################################################
+# MaJeDo
 
 
 from tkinter import *
