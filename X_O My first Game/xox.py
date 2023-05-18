@@ -5,7 +5,7 @@ root=Tk()
 #root.attributes('-fullscreen', True)
 
 is_winner=0
-
+gas=2
 frame1=LabelFrame(root,width=200,bg="#00EE76")
 
 root.config(bg="#00EE76")
